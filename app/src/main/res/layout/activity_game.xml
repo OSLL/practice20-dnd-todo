@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/health"
+        android:id="@+id/healthV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/mana"
+        android:id="@+id/manaV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -25,10 +25,10 @@
         android:hint="your mana"
         android:textSize="50sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/health" />
+        app:layout_constraintTop_toBottomOf="@id/healthV" />
 
     <TextView
-        android:id="@+id/exp"
+        android:id="@+id/expV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -36,7 +36,7 @@
         android:hint="your exp"
         android:textSize="50sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mana" />
+        app:layout_constraintTop_toBottomOf="@id/manaV" />
 
     <ImageView
         android:id="@+id/backpack"
