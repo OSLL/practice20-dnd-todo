@@ -1,5 +1,6 @@
 package com.makentoshe.androidgithubcitemplate
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -13,5 +14,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        start_game.setOnClickListener { v: View? ->
+            val intent: Intent = Intent(this, GameActivity::class.java)
+            finish()
+            startActivity(intent)
+        }
     }
 }
