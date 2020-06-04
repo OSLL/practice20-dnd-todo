@@ -11,7 +11,7 @@ class GameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
-        backpack.setOnClickListener { v: View? ->
+        backpack.setOnClickListener {
             val intent: Intent = Intent(this, BackpackActivity::class.java)
             startActivity(intent)
         }
