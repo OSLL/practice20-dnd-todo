@@ -7,14 +7,14 @@
     android:orientation="horizontal" >
 
     <Button
-        android:id="@+id/physical_attack"
+        android:id="@+id/swap_hood"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:text="Physical attack?"/>
+        android:text="Swap hood"/>
 
     <Button
-        android:id="@+id/magic_attack"
+        android:id="@+id/do_not_swap_armor"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:text="Magic attack??"/>
+        android:text="Don't swap hood"/>
 </GridLayout>

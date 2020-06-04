@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:columnCount="1"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/physical_attack"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Physical attack?"/>
+
+    <Button
+        android:id="@+id/magic_attack_1"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Magic attack 1?"/>
+
+    <Button
+        android:id="@+id/magic_attack_2"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Magic attack 2?"/>
+
+    <Button
+        android:id="@+id/magic_attack_3"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Magic attack 3?"/>
+
+    <Button
+        android:id="@+id/magic_attack_4"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Magic attack 4?"/>
+
+</GridLayout>

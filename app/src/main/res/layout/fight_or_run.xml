@@ -7,14 +7,14 @@
     android:orientation="horizontal" >
 
     <Button
-        android:id="@+id/physical_attack"
+        android:id="@+id/fight"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:text="Physical attack?"/>
+        android:text="Fight?"/>
 
     <Button
-        android:id="@+id/magic_attack"
+        android:id="@+id/run"
         android:layout_width="180dp"
         android:layout_height="60dp"
-        android:text="Magic attack??"/>
+        android:text="Run?"/>
 </GridLayout>

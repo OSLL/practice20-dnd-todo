@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:columnCount="1"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/swap_magic_1"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Swap first magic"/>
+
+    <Button
+        android:id="@+id/swap_magic_2"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Swap second magic"/>
+
+    <Button
+        android:id="@+id/swap_magic_3"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Swap third magic"/>
+
+    <Button
+        android:id="@+id/swap_magic_4"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Swap fourth magic"/>
+
+    <Button
+        android:id="@+id/do_not_swap_magic"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Don't swap magic"/>
+
+</GridLayout>
