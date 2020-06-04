@@ -1,6 +1,6 @@
 package com.makentoshe.androidgithubcitemplate
 
-import android.R
+import android.R.id
 import android.app.Dialog
 import android.os.Bundle
 import android.content.Context
@@ -20,9 +20,9 @@ class EqiupDialog : DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val v = inflater.inflate(2131361824, container, false)
-        val yes: Button = v.findViewById(2131165386)
-        val no: Button = v.findViewById(2131165309)
+        val v = inflater.inflate(R.layout.dialog_equip, container, false)
+        val yes: Button = v.findViewById(R.id.yes)
+        val no: Button = v.findViewById(R.id.no)
 
 
         yes.setOnClickListener {
