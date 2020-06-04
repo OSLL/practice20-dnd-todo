@@ -27,6 +27,17 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/health" />
 
+    <TextView
+        android:id="@+id/exp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="your exp"
+        android:textSize="50sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mana" />
+
     <ImageView
         android:id="@+id/backpack"
         android:layout_width="wrap_content"
@@ -39,7 +50,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/armory"
+        android:id="@+id/equipment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -49,6 +60,7 @@
         app:layout_constraintTop_toBottomOf="@id/backpack"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <!--
     <ImageView
         android:id="@+id/magic"
         android:layout_width="wrap_content"
@@ -59,6 +71,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/armory"
         tools:srcCompat="@tools:sample/avatars" />
+    -->
 
     <TextView
         android:id="@+id/story"
@@ -68,7 +81,7 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/magic"
+        app:layout_constraintRight_toLeftOf="@id/equipment"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"/>
