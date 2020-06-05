@@ -6,4 +6,151 @@
     android:layout_height="match_parent"
     tools:context=".EquipmentActivity">
 
+    <ImageView
+        android:id="@+id/magic1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/magic2"
+        app:layout_constraintStart_toEndOf="@id/rarm"
+        app:layout_constraintEnd_toStartOf="@id/hpTV"
+        app:srcCompat="@drawable/backpack" />
+
+    <ImageView
+        android:id="@+id/magic2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/magic3"
+        app:layout_constraintTop_toBottomOf="@+id/magic1"
+        app:layout_constraintStart_toEndOf="@id/rarm"
+        app:layout_constraintEnd_toStartOf="@id/hpTV"
+        app:srcCompat="@drawable/backpack" />
+
+    <ImageView
+        android:id="@+id/magic3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toTopOf="@id/magic4"
+        app:layout_constraintTop_toBottomOf="@id/magic2"
+        app:layout_constraintStart_toEndOf="@id/rarm"
+        app:layout_constraintEnd_toStartOf="@id/hpTV"
+        app:srcCompat="@drawable/backpack" />
+
+    <ImageView
+        android:id="@+id/magic4"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/magic3"
+        app:layout_constraintStart_toEndOf="@id/rarm"
+        app:layout_constraintEnd_toStartOf="@id/hpTV"
+        app:srcCompat="@drawable/backpack" />
+
+    <ImageView
+        android:id="@+id/larm"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/chest"
+        app:layout_constraintTop_toBottomOf="@+id/helmet"
+        app:srcCompat="@drawable/backpack" />
+
+    <ImageView
+        android:id="@+id/rarm"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toEndOf="@+id/chest"
+        app:layout_constraintTop_toBottomOf="@+id/helmet"
+        app:srcCompat="@drawable/backpack"
+        android:layout_marginStart="20dp"/>
+
+    <ImageView
+        android:id="@+id/ulegs"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toTopOf="@id/dlegs"
+        app:layout_constraintTop_toBottomOf="@+id/chest"
+        app:layout_constraintStart_toEndOf="@id/larm"
+        app:layout_constraintEnd_toStartOf="@id/rarm"
+        app:srcCompat="@drawable/backpack" />
+
+    <ImageView
+        android:id="@+id/dlegs"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ulegs"
+        app:layout_constraintStart_toEndOf="@id/larm"
+        app:layout_constraintEnd_toStartOf="@id/rarm"
+        app:srcCompat="@drawable/backpack" />
+
+    <ImageView
+        android:id="@+id/chest"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toEndOf="@+id/larm"
+        app:layout_constraintEnd_toStartOf="@id/rarm"
+        app:layout_constraintTop_toBottomOf="@+id/helmet"
+        android:layout_marginStart="20dp"
+        app:srcCompat="@drawable/backpack" />
+
+    <ImageView
+        android:id="@+id/helmet"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chest"
+        app:layout_constraintStart_toEndOf="@id/larm"
+        app:layout_constraintEnd_toStartOf="@id/rarm"
+        app:srcCompat="@drawable/backpack" />
+
+    <TextView
+        android:id="@+id/hpTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HP"
+        app:layout_constraintStart_toEndOf="@id/magic2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/manaTV"/>
+
+    <TextView
+        android:id="@+id/manaTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MANA"
+        app:layout_constraintStart_toEndOf="@id/magic2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hpTV"
+        app:layout_constraintBottom_toTopOf="@id/expTV"/>
+
+    <TextView
+        android:id="@+id/expTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EXP"
+        app:layout_constraintStart_toEndOf="@id/magic2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/manaTV"
+        app:layout_constraintBottom_toTopOf="@id/to_gameB"/>
+
+    <ImageView
+        android:id="@+id/to_gameB"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/backpack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expTV"
+        app:layout_constraintStart_toEndOf="@id/magic2"
+        app:layout_constraintBottom_toTopOf="@id/to_backpackB"/>
+
+    <ImageView
+        android:id="@+id/to_backpackB"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/backpack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/to_gameB"
+        app:layout_constraintStart_toEndOf="@id/magic2"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

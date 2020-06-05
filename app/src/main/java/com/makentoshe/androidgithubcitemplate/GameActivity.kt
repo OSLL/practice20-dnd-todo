@@ -26,6 +26,11 @@ class GameActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        equipment.setOnClickListener {
+            val intent: Intent = Intent(this, EquipmentActivity::class.java)
+            startActivity(intent)
+        }
+
         healthV.text = "$health/$MAX_HEALTH"
         manaV.text = "$mana/$MAX_MANA"
         expV.text = "$exp/$MAX_EXP"
