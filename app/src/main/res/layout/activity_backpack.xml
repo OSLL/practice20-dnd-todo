@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="7"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/subject00"
+        android:layout_column="0"
+        android:layout_marginTop="-15dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[0][0]"/>
+
+    <Button
+        android:id="@+id/subject01"
+        android:layout_column="1"
+        android:layout_marginTop="-15dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[0][1]"/>
+
+    <Button
+        android:id="@+id/subject02"
+        android:layout_column="2"
+        android:layout_marginTop="-15dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[0][2]"/>
+
+    <Button
+        android:id="@+id/subject03"
+        android:layout_column="3"
+        android:layout_marginTop="-15dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[0][3]"/>
+
+    <Button
+        android:id="@+id/subject04"
+        android:layout_column="4"
+        android:layout_marginTop="-15dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[0][4]"/>
+
+    <Button
+        android:id="@+id/subject05"
+        android:layout_column="5"
+        android:layout_marginTop="-15dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[0][5]"/>
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_column="6"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:text="Exit"/>
+
+    <Button
+        android:id="@+id/subject10"
+        android:layout_column="0"
+        android:layout_marginTop="-45dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[1][0]"/>
+
+    <Button
+        android:id="@+id/subject11"
+        android:layout_column="1"
+        android:layout_marginTop="-45dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[1][1]"/>
+
+    <Button
+        android:id="@+id/subject12"
+        android:layout_column="2"
+        android:layout_marginTop="-45dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[1][2]"/>
+
+    <Button
+        android:id="@+id/subject13"
+        android:layout_column="3"
+        android:layout_marginTop="-45dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[1][3]"/>
+
+    <Button
+        android:id="@+id/subject14"
+        android:layout_column="4"
+        android:layout_marginTop="-45dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[1][4]"/>
+
+    <Button
+        android:id="@+id/subject15"
+        android:layout_column="5"
+        android:layout_marginTop="-45dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[1][5]"/>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_column="6"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:text="Save"/>
+
+    <Button
+        android:id="@+id/subject20"
+        android:layout_column="0"
+        android:layout_marginTop="-75dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[2][0]"/>
+
+    <Button
+        android:id="@+id/subject21"
+        android:layout_column="1"
+        android:layout_marginTop="-75dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[2][1]"/>
+
+    <Button
+        android:id="@+id/subject22"
+        android:layout_column="2"
+        android:layout_marginTop="-75dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[2][2]"/>
+
+    <Button
+        android:id="@+id/subject23"
+        android:layout_column="3"
+        android:layout_marginTop="-75dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[2][3]"/>
+
+    <Button
+        android:id="@+id/subjecyt24"
+        android:layout_column="4"
+        android:layout_marginTop="-75dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[2][4]"/>
+
+    <Button
+        android:id="@+id/subject25"
+        android:layout_column="5"
+        android:layout_marginTop="-75dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[2][5]"/>
+
+    <Button
+        android:id="@+id/equipment"
+        android:layout_column="6"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:text="Equipment"/>
+
+    <Button
+        android:id="@+id/subject30"
+        android:layout_column="0"
+        android:layout_marginTop="-90dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[3][0]"/>
+
+    <Button
+        android:id="@+id/subject31"
+        android:layout_column="1"
+        android:layout_marginTop="-90dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[3][1]"/>
+
+    <Button
+        android:id="@+id/subjecyt32"
+        android:layout_column="2"
+        android:layout_marginTop="-90dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[3][2]"/>
+
+    <Button
+        android:id="@+id/subject33"
+        android:layout_column="3"
+        android:layout_marginTop="-90dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[3][3]"/>
+
+    <Button
+        android:id="@+id/subject34"
+        android:layout_column="4"
+        android:layout_marginTop="-90dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[3][4]"/>
+
+    <Button
+        android:id="@+id/subject35"
+        android:layout_column="5"
+        android:layout_marginTop="-90dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="Sublect[3][5]"/>
+
+</GridLayout>

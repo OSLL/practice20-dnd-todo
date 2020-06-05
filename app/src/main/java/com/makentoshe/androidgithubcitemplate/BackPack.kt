@@ -6,23 +6,18 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_normal.*
 
-class NormalActivity : AppCompatActivity() {
+class BackPack : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-        setContentView(R.layout.activity_normal)
+        setContentView(R.layout.activity_backpack)
 
         exit.setOnClickListener {
-            Log.d("tag", "End")
-            val myIntent = Intent(this, MainActivity::class.java)
-            startActivity(myIntent)
-        }
-
-        backpack.setOnClickListener {
-            Log.d("tag", "Equipment")
-            val myIntent = Intent(this, BackPack::class.java)
+            Log.d("tag", "Game")
+            val myIntent = Intent(this, NormalActivity::class.java)
             startActivity(myIntent)
         }
 

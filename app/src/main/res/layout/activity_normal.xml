@@ -44,11 +44,11 @@
         android:layout_height="40dp"
         android:text="Equipment"/>
 
-    <Button
+    <TextView
         android:id="@+id/text"
         android:layout_marginTop="180dp"
         android:layout_width="720dp"
         android:layout_height="60dp"
-        android:text="Text"/>
+        android:text="Hello world"/>
 
 </GridLayout>
