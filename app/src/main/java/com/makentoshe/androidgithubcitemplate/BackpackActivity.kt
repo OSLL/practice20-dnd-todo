@@ -18,7 +18,7 @@ class BackpackActivity : AppCompatActivity() {
         Log.d("id", R.id.no.toString())
 
 
-        back.setOnClickListener {
+        to_game.setOnClickListener {
             super.onBackPressed()
         }
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
-    <GridLayout xmlns:tools="http://schemas.android.com/tools"
+    <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="5"
@@ -16,8 +16,8 @@
 
         <ImageView
             android:id="@+id/item1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item1"
@@ -25,96 +25,152 @@
 
         <ImageView
             android:id="@+id/item2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item2"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/backpack" />
 
         <ImageView
             android:id="@+id/item3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item3"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/backpack" />
 
         <ImageView
             android:id="@+id/item4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item4"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/backpack" />
 
         <ImageView
             android:id="@+id/item5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item5"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/backpack" />
 
         <ImageView
             android:id="@+id/item6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item6"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/backpack" />
 
         <ImageView
             android:id="@+id/item7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item7"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/backpack" />
 
         <ImageView
             android:id="@+id/item8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item8"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/backpack" />
 
         <ImageView
             android:id="@+id/item9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item9"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/backpack" />
 
         <ImageView
             android:id="@+id/item10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item10"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/backpack" />
+
+        <ImageView
+            android:id="@+id/item11"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="item10"
+            android:src="@drawable/backpack" />
+
+        <ImageView
+            android:id="@+id/item12"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="item10"
+            android:src="@drawable/backpack" />
+
+        <ImageView
+            android:id="@+id/item13"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="item10"
+            android:src="@drawable/backpack" />
+
+        <ImageView
+            android:id="@+id/item14"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="item10"
+            android:src="@drawable/backpack" />
+
+        <ImageView
+            android:id="@+id/item15"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="item10"
+            android:src="@drawable/backpack" />
 
     </GridLayout>
 
     <ImageView
-        android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/to_game"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="to game screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/to_equipment"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/backpack" />
+
+    <ImageView
+        android:id="@+id/to_equipment"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="to equipment screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/to_game"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:contentDescription="Back"
-        tools:srcCompat="@tools:sample/avatars"
-        />
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/backpack" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
