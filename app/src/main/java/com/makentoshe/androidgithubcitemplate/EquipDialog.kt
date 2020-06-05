@@ -27,9 +27,11 @@ class EqiupDialog : DialogFragment() {
 
         yes.setOnClickListener {
             Log.d("PRESSED", "yes pressed in dialog")
+            dialog?.dismiss()
         }
         no.setOnClickListener {
             Log.d("PRESSED", "no pressed in dialog")
+            dialog?.dismiss()
         }
 
         return v // normaldi rabotaet
