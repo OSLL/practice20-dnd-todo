@@ -1,55 +1,39 @@
 package com.makentoshe.androidgithubcitemplate
 
-import android.R.id
-import android.app.ActionBar
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
-import android.content.Context
-import android.util.Log
-import android.view.LayoutInflater
+import android.text.Editable
 import android.view.View
-import android.view.ViewGroup
-import android.view.WindowManager
-import android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN
-import android.widget.Button
+import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
-//import kotlinx.android.synthetic.main.dialog_equip.*
+import androidx.fragment.app.FragmentManager
 
-
-class EqiupDialog : DialogFragment() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        dialog?.window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-    }
+class EquipDialog : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        dialog?.window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-        return super.onCreateDialog(savedInstanceState)
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setView(R.layout.dialog_equip)
+        builder.setNegativeButton("Cancel") { dialog, _ -> dialog.dismiss() }
+        builder.setPositiveButton("Equip") { dialog, _ ->
+            onPositiveClick(dialog as AlertDialog)
+            dismiss()
+        }
+        return builder.create()
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val v = inflater.inflate(R.layout.dialog_equip, container, false)
-        val yes: Button = v.findViewById(R.id.yes)
-        val no: Button = v.findViewById(R.id.no)
+    private fun onPositiveClick(dialog: AlertDialog) {
+        val intent = Intent().putExtra("click", 1)
+        (requireActivity() as BackpackActivity).onActivityResult(1, 1, intent)
+    }
 
-        dialog?.window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+    class Factory {
 
-        yes.setOnClickListener {
-            Log.d("PRESSED", "yes pressed in dialog")
-            dialog?.dismiss()
+        fun show(parentFragmentManager: FragmentManager): EquipDialog {
+            val fragment = EquipDialog()
+            fragment.show(parentFragmentManager, EquipDialog::class.java.simpleName)
+            return fragment
         }
-        no.setOnClickListener {
-            Log.d("PRESSED", "no pressed in dialog")
-            dialog?.dismiss()
-        }
-
-        return v // normaldi rabotaet
-//        return inflater.inflate(R.layout.dialog_equip, container, false) //ne norm ne builditsa
-        //return super.onCreateView(inflater.inflate(R.layout.dialog_eqiup, container, false), container, savedInstanceState)
     }
 }
