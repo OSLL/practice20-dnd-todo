@@ -19,6 +19,8 @@ class GameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+
         backpack.setOnClickListener {
             val intent: Intent = Intent(this, BackpackActivity::class.java)
             startActivity(intent)
@@ -32,5 +34,15 @@ class GameActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+    }
+
+    override fun onPause() {
+        super.onPause()
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
     }
 }
