@@ -21,6 +21,12 @@ class BackpackActivity : AppCompatActivity() {
             super.onBackPressed()
         }
 
+        to_equipment.setOnClickListener {
+            val intent: Intent = Intent(this, EquipmentActivity::class.java)
+            finish()
+            startActivity(intent)
+        }
+
         item1.setOnClickListener {
             EquipDialog.Factory().show(supportFragmentManager)
             //val eqDialog: EqiupDialog = EqiupDialog()
