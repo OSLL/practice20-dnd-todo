@@ -17,4 +17,11 @@
         android:layout_width="180dp"
         android:layout_height="60dp"
         android:text="Load"/>
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Exit"/>
+
 </GridLayout>
