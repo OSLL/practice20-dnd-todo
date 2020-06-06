@@ -11,7 +11,7 @@ interface ItemDao {
     fun loadAllByIds(itemIds: IntArray): List<Item>
 
     @Query("SELECT * FROM item WHERE equiped LIKE :eq")
-    fun findByName(eq: Boolean): Item
+    fun findEquiped(eq: Boolean): Item
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(vararg items: Item)
