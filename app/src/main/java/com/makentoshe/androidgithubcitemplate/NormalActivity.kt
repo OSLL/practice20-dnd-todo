@@ -22,7 +22,7 @@ class NormalActivity : AppCompatActivity() {
 
         backpack.setOnClickListener {
             Log.d("tag", "Equipment")
-            val myIntent = Intent(this, BackPack::class.java)
+            val myIntent = Intent(this, BackPackGame::class.java)
             startActivity(myIntent)
         }
 

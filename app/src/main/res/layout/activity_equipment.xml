@@ -5,126 +5,132 @@
     android:columnCount="6"
     android:orientation="horizontal" >
 
-    <ImageButton
+    <Button
         android:id="@+id/hood"
         android:layout_column="0"
+        android:layout_marginTop="-45dp"
+        android:background="@mipmap/ic_launcher"
         android:layout_width="90dp"
         android:layout_height="90dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/right_arm"
         android:layout_column="1"
         android:layout_width="90dp"
         android:layout_height="180dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/magic_1"
         android:layout_column="2"
+        android:layout_marginTop="-45dp"
         android:layout_width="90dp"
         android:layout_height="90dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/heal_potion"
         android:layout_column="3"
+        android:layout_marginTop="-30dp"
         android:layout_width="90dp"
         android:layout_height="120dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/heal_points"
         android:layout_column="4"
+        android:layout_marginTop="-30dp"
         android:layout_width="180dp"
         android:layout_height="120dp"/>
 
-    <ImageButton
-        android:id="@+id/exit"
+    <Button
+        android:id="@+id/exit_e"
         android:layout_column="5"
+        android:layout_marginTop="-30dp"
         android:layout_width="180dp"
         android:layout_height="120dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/armor"
         android:layout_column="0"
-        android:layout_marginTop="-90dp"
+        android:layout_marginTop="-135dp"
         android:layout_width="90dp"
         android:layout_height="90dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/left_arm"
         android:layout_column="1"
         android:layout_width="90dp"
         android:layout_height="180dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/magic_2"
         android:layout_column="2"
-        android:layout_marginTop="-90dp"
+        android:layout_marginTop="-135dp"
         android:layout_width="90dp"
         android:layout_height="90dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/magic_potion"
         android:layout_column="3"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="-90dp"
         android:layout_width="90dp"
         android:layout_height="120dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/magic_points"
         android:layout_column="4"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="-90dp"
         android:layout_width="180dp"
         android:layout_height="120dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/save"
         android:layout_column="5"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="-90dp"
         android:layout_width="180dp"
         android:layout_height="120dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/pants"
         android:layout_column="0"
-        android:layout_marginTop="-180dp"
+        android:layout_marginTop="-195dp"
         android:layout_width="90dp"
         android:layout_height="90dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/magic_3"
         android:layout_column="2"
-        android:layout_marginTop="-180dp"
+        android:layout_marginTop="-195dp"
         android:layout_width="90dp"
         android:layout_height="90dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/experience_points"
         android:layout_column="4"
         android:layout_marginTop="-120dp"
         android:layout_width="180dp"
         android:layout_height="120dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/backpack"
         android:layout_column="5"
         android:layout_marginTop="-120dp"
         android:layout_width="180dp"
         android:layout_height="120dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/experience_potion"
         android:layout_column="3"
         android:layout_marginTop="-120dp"
         android:layout_width="90dp"
         android:layout_height="120dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/boots"
         android:layout_column="0"
         android:layout_marginTop="-90dp"
         android:layout_width="90dp"
         android:layout_height="90dp"/>
 
-    <ImageButton
+    <Button
         android:id="@+id/magic_4"
         android:layout_column="2"
         android:layout_marginTop="-90dp"

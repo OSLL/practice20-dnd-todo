@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
+import kotlinx.android.synthetic.main.activity_equipment.*
 import kotlinx.android.synthetic.main.activity_normal.*
+import kotlinx.android.synthetic.main.activity_normal.backpack
 
 class Equipment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +16,7 @@ class Equipment : AppCompatActivity() {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_equipment)
 
-        exit.setOnClickListener {
+        exit_e.setOnClickListener {
             Log.d("tag", "Game")
             val myIntent = Intent(this, NormalActivity::class.java)
             startActivity(myIntent)
@@ -22,7 +24,7 @@ class Equipment : AppCompatActivity() {
 
         backpack.setOnClickListener {
             Log.d("tag", "Backpack")
-            val myIntent = Intent(this, BackPack::class.java)
+            val myIntent = Intent(this, BackPackGame::class.java)
             startActivity(myIntent)
         }
     }
