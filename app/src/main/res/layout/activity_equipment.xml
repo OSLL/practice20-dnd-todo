@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EquipmentActivity">
+    tools:context=".EquipmentActivity"
+    android:background="@drawable/background">
 
     <ImageView
         android:id="@+id/magic1"
@@ -24,7 +25,8 @@
         app:layout_constraintTop_toBottomOf="@+id/magic1"
         app:layout_constraintStart_toEndOf="@id/rarm"
         app:layout_constraintEnd_toStartOf="@id/hpTV"
-        app:srcCompat="@drawable/backpack" />
+        app:srcCompat="@drawable/backpack"
+        />
 
     <ImageView
         android:id="@+id/magic3"
