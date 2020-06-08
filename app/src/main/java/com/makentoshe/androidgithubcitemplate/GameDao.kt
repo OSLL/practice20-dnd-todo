@@ -8,8 +8,8 @@ interface GameDao {
     @Query("SELECT * FROM game")
     fun getAll(): List<Game>
 
-    @Query("SELECT * FROM game WHERE gid IN (:gameIds)")
-    fun loadAllByIds(gameIds: IntArray): List<Game>
+    @Query("SELECT * FROM game WHERE gid = :id")
+    fun loadById(id: Int): Game
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(vararg games: Game)

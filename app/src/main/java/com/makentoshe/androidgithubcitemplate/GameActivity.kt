@@ -3,6 +3,7 @@ package com.makentoshe.androidgithubcitemplate
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_game.*
 
@@ -31,10 +32,18 @@ class GameActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val gameDao = AppDatabase.getDatabase(applicationContext).gameDao()
+        val game: Game = Game(1)
+        //Log.d("CUR GAMES", gameDao.getAll().size.toString())
+        game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.chest1))!!
+        game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.helmet1))!!
+        game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.legs1))!!
+        game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.uplegs1))!!
+        gameDao.insertAll(game)
+
         healthV.text = "$health/$MAX_HEALTH"
         manaV.text = "$mana/$MAX_MANA"
         expV.text = "$exp/$MAX_EXP"
-
     }
 
     override fun onBackPressed() {

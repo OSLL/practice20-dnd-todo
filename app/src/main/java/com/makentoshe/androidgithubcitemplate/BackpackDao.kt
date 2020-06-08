@@ -13,7 +13,7 @@ interface BackpackDao {
     fun loadByIds(id: Int): Backpack
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll(vararg items: Item)
+    fun insertAll(vararg backpacks: Backpack)
 
     @Delete
     fun delete(backpack: Backpack)

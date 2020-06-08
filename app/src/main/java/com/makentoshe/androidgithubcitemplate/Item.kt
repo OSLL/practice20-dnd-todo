@@ -6,9 +6,9 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Item (
-    @PrimaryKey val iid: Int,
-    @ColumnInfo(name = "drawable_id") val drawableId: Int?,
-    @ColumnInfo(name = "type_of_item") val typeOfItem: String?,
-    @ColumnInfo(name = "extend_hp") val extendHp: Int?,
-    @ColumnInfo(name = "equiped") val equiped: Boolean
+    @PrimaryKey(autoGenerate = true) var iid: Int = 0,
+    @ColumnInfo(name = "drawable_id") var drawableId: Int = 0,
+    @ColumnInfo(name = "type_of_item") var typeOfItem: String = "",
+    @ColumnInfo(name = "extend_hp") var extendHp: Int = 0,
+    @ColumnInfo(name = "equiped") var equiped: Boolean = false
 )

@@ -7,8 +7,8 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Game(
-    @PrimaryKey val gid: Int,
+    @PrimaryKey(autoGenerate = true) val gid: Int = 0,
     //@ColumnInfo(name = "player") val player: Player
     @Embedded
-    var player: Player
+    public var player: Player = Player()
 )

@@ -1,14 +1,11 @@
 package com.makentoshe.androidgithubcitemplate
 
-import androidx.room.ColumnInfo
-import androidx.room.Embedded
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import androidx.room.*
 
 @Entity
 data class Backpack(
-    @PrimaryKey val bid: Int,
-    @Embedded
-    var items: List<Item>?
-    //@ColumnInfo(name = "drawable_id") val items: List<Item>?
+    @PrimaryKey(autoGenerate = true) val bid: Int = 0,
+    @TypeConverters(ListItemConverter::class)
+    var items: List<Item> = emptyList()
+    //@ColumnInfo(name = "list_of_items") val items: List<Item>?
 )

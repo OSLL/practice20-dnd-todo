@@ -1,23 +1,20 @@
 package com.makentoshe.androidgithubcitemplate
 
-import androidx.room.ColumnInfo
-import androidx.room.Embedded
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import androidx.room.*
 
 @Entity
 data class Player(
-    @PrimaryKey val pid: Int,
-    @ColumnInfo(name = "health") var hp: Int?,
-    @ColumnInfo(name = "mana") var mana: Int?,
-    @ColumnInfo(name = "experience") var exp: Int?,
-    @ColumnInfo(name = "max_health") var maxHp: Int?,
-    @ColumnInfo(name = "max_mana") var maxMana: Int?,
-    @ColumnInfo(name = "max_experience") var maxExp: Int?,
+    @PrimaryKey(autoGenerate = true) val pid: Int = 0,
+    @ColumnInfo(name = "health") var hp: Int? = 100,
+    @ColumnInfo(name = "mana") var mana: Int? = 0,
+    @ColumnInfo(name = "experience") var exp: Int? = 0,
+    @ColumnInfo(name = "max_health") var maxHp: Int? = 100,
+    @ColumnInfo(name = "max_mana") var maxMana: Int? = 400,
+    @ColumnInfo(name = "max_experience") var maxExp: Int? = 999999999,
     //@ColumnInfo(name = "backpack") val backpack: Backpack?,
     @Embedded
-    var backpack: Backpack?,
-    @Embedded
-    var equipedItems: List<Item>?
+    var backpack: Backpack? = Backpack(),
+    @TypeConverters(ListItemConverter::class)
+    var equipedItems: List<Item> = emptyList()
     //@ColumnInfo(name = "equiped_items") val equipedItems: List<Item>
     )
