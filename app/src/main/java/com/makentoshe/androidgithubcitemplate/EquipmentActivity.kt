@@ -19,5 +19,17 @@ class EquipmentActivity : AppCompatActivity() {
             finish()
             startActivity(intent)
         }
+
+        val gameDao = AppDatabase.getDatabase(applicationContext).gameDao()
+        val game: Game = gameDao.loadById(1)
+
+        for (i in game.player.equipedItems){
+            when (i.typeOfItem){
+                "helmet" -> helmet.setImageResource(i.drawableId)
+                "chest" -> chest.setImageResource(i.drawableId)
+                "legs" -> ulegs.setImageResource(i.drawableId)
+                "boots" -> dlegs.setImageResource(i.drawableId)
+            }
+        }
     }
 }

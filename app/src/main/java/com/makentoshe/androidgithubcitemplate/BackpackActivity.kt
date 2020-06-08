@@ -10,7 +10,8 @@ import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_backpack.*
 
 class BackpackActivity : AppCompatActivity() {
-    var itemViews: List<ImageView> = emptyList()
+    private var itemViews: List<ImageView> = emptyList()
+    private var lastPressed: Int = 0
 
     fun addItems(){
         itemViews = itemViews.plus(item1)
@@ -49,6 +50,7 @@ class BackpackActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        /*
         item1.setOnClickListener {
             EquipDialog.Factory().show(supportFragmentManager)
             //val eqDialog: EqiupDialog = EqiupDialog()
@@ -56,6 +58,7 @@ class BackpackActivity : AppCompatActivity() {
             //eqDialog.show(manager, "myDialog")
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         }
+         */
 
         addItems()
         //itemViews = itemViews.plus(item1)
@@ -68,8 +71,24 @@ class BackpackActivity : AppCompatActivity() {
             if (game.player.backpack?.items!!.lastIndex < i) break
 
             itemViews[i].setImageResource(game.player.backpack?.items!![i].drawableId)
+            itemViews[i].setTag(game.player.backpack?.items!![i].drawableId)
+
+            itemViews[i].setOnClickListener {
+                EquipDialog.Factory().show(supportFragmentManager)
+                window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+                lastPressed = i
+            }
         }
 
+        /*
+        for (i in itemViews.indices){
+            itemViews[i].setOnClickListener {
+                EquipDialog.Factory().show(supportFragmentManager)
+                window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+                lastPressed = i
+            }
+        }
+         */
     }
 
     override fun onResume() {
@@ -91,7 +110,27 @@ class BackpackActivity : AppCompatActivity() {
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 1){
+            val gameDao = AppDatabase.getDatabase(applicationContext).gameDao()
+            val game: Game = gameDao.loadById(1)
 
+            if (game.player.backpack?.items!!.lastIndex < lastPressed)
+                return
+
+            Log.d("DIALOG DEBUG", "pressed on item$lastPressed")
+            val res: MutableList<Item> = game.player.backpack?.items!!.toMutableList()
+            // TODO(unequip item if we can)
+            game.player.equipedItems = game.player.equipedItems.plus(res.removeAt(lastPressed))
+
+            game.player.backpack?.items = res.toList()
+
+            itemViews[game.player.backpack?.items!!.size].setImageResource(R.drawable.empty)
+            for (i in itemViews.indices){
+                if (game.player.backpack?.items!!.lastIndex < i) break
+
+                itemViews[i].setImageResource(game.player.backpack?.items!![i].drawableId)
+                itemViews[i].setTag(game.player.backpack?.items!![i].drawableId)
+            }
+            gameDao.insertAll(game)
         }
     }
 }
