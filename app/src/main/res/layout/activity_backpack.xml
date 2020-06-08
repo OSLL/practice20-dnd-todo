@@ -22,7 +22,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item1"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item2"
@@ -31,7 +31,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item2"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item3"
@@ -40,7 +40,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item3"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item4"
@@ -49,7 +49,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item4"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item5"
@@ -58,7 +58,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item5"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item6"
@@ -67,7 +67,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item6"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item7"
@@ -76,7 +76,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item7"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item8"
@@ -85,7 +85,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item8"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item9"
@@ -94,7 +94,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item9"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item10"
@@ -103,7 +103,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item10"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item11"
@@ -112,7 +112,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item10"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item12"
@@ -121,7 +121,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item10"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item13"
@@ -130,7 +130,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item10"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item14"
@@ -139,7 +139,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item10"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
         <ImageView
             android:id="@+id/item15"
@@ -148,7 +148,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="item10"
-            android:src="@drawable/backpack" />
+            android:src="@drawable/empty" />
 
     </GridLayout>
 
@@ -172,6 +172,6 @@
         app:layout_constraintTop_toBottomOf="@id/to_game"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginEnd="10dp"
-        android:src="@drawable/backpack" />
+        android:src="@drawable/avatar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
