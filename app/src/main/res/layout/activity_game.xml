@@ -15,7 +15,8 @@
         android:hint="your hp"
         android:textSize="50sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#F1F1F1"/>
 
     <TextView
         android:id="@+id/manaV"
@@ -26,7 +27,8 @@
         android:hint="your mana"
         android:textSize="50sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/healthV" />
+        app:layout_constraintTop_toBottomOf="@id/healthV"
+        android:textColor="#F1F1F1"/>
 
     <TextView
         android:id="@+id/expV"
@@ -37,7 +39,8 @@
         android:hint="your exp"
         android:textSize="50sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/manaV" />
+        app:layout_constraintTop_toBottomOf="@id/manaV"
+        android:textColor="#F1F1F1"/>
 
     <ImageView
         android:id="@+id/backpack"
@@ -83,6 +86,7 @@
         app:layout_constraintRight_toLeftOf="@id/equipment"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textColor="#F1F1F1"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
