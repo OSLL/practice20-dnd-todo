@@ -3,13 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="2"
-    android:orientation="horizontal" >
+    android:orientation="horizontal"
+    android:background="@android:color/background_dark">
 
     <TextView
         android:id="@+id/HP"
-        android:layout_marginTop="-10dp"
         android:layout_width="90dp"
         android:layout_height="40dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:gravity="center"
         android:text="HP"/>
 
     <Button
@@ -21,23 +23,25 @@
 
     <TextView
         android:id="@+id/mana"
-        android:layout_marginTop="-10dp"
         android:layout_width="90dp"
         android:layout_height="40dp"
-        android:text="Mana"/>
+        android:textColor="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:text="MANA"/>
 
     <Button
         android:id="@+id/backpack"
         android:layout_marginStart="-40dp"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:text="Backpack"/>
+        android:background="@drawable/backpack"/>
 
     <TextView
         android:id="@+id/EXP"
-        android:layout_marginTop="-10dp"
         android:layout_width="90dp"
         android:layout_height="40dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:gravity="center"
         android:text="EXP"/>
 
     <Button
@@ -45,13 +49,14 @@
         android:layout_marginStart="-40dp"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:text="Equipment"/>
+        android:background="@drawable/avatar"/>
 
     <TextView
         android:id="@+id/text"
         android:layout_marginTop="180dp"
         android:layout_width="720dp"
         android:layout_height="60dp"
+        android:textColor="@android:color/white"
         android:text="Hello world"/>
 
 </GridLayout>

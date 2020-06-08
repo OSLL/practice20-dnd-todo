@@ -27,6 +27,66 @@ class Equipment : AppCompatActivity() {
             val myIntent = Intent(this, BackPackGame::class.java)
             startActivity(myIntent)
         }
+
+        hood.setOnClickListener {
+            Log.d("tag", "Backpack")
+            val myIntent = Intent(this, BackPackGame::class.java)
+            startActivity(myIntent)
+        }
+
+        armor.setOnClickListener {
+            Log.d("tag", "Backpack")
+            val myIntent = Intent(this, BackPackGame::class.java)
+            startActivity(myIntent)
+        }
+
+        pants.setOnClickListener {
+            Log.d("tag", "Backpack")
+            val myIntent = Intent(this, BackPackGame::class.java)
+            startActivity(myIntent)
+        }
+
+        boots.setOnClickListener {
+            Log.d("tag", "Backpack")
+            val myIntent = Intent(this, BackPackGame::class.java)
+            startActivity(myIntent)
+        }
+
+        right_arm.setOnClickListener {
+            Log.d("tag", "Backpack")
+            val myIntent = Intent(this, BackPackGame::class.java)
+            startActivity(myIntent)
+        }
+
+        left_arm.setOnClickListener {
+            Log.d("tag", "Backpack")
+            val myIntent = Intent(this, BackPackGame::class.java)
+            startActivity(myIntent)
+        }
+
+        magic_1.setOnClickListener {
+            Log.d("tag", "Backpack")
+            val myIntent = Intent(this, BackPackGame::class.java)
+            startActivity(myIntent)
+        }
+
+        magic_2.setOnClickListener {
+            Log.d("tag", "Backpack")
+            val myIntent = Intent(this, BackPackGame::class.java)
+            startActivity(myIntent)
+        }
+
+        magic_3.setOnClickListener {
+            Log.d("tag", "Backpack")
+            val myIntent = Intent(this, BackPackGame::class.java)
+            startActivity(myIntent)
+        }
+
+        magic_4.setOnClickListener {
+            Log.d("tag", "Backpack")
+            val myIntent = Intent(this, BackPackGame::class.java)
+            startActivity(myIntent)
+        }
     }
 
     private fun hideSystemUI() {

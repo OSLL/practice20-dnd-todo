@@ -14,6 +14,10 @@ class NormalActivity : AppCompatActivity() {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_normal)
 
+        text.setOnClickListener {
+            text.text = "AAAAAAA"
+        }
+
         exit.setOnClickListener {
             Log.d("tag", "End")
             val myIntent = Intent(this, MainActivity::class.java)
