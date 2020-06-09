@@ -119,7 +119,11 @@ class BackpackActivity : AppCompatActivity() {
             Log.d("DIALOG DEBUG", "pressed on item$lastPressed")
             val res: MutableList<Item> = game.player.backpack?.items!!.toMutableList()
             // TODO(unequip item if we can)
-            game.player.equipedItems = game.player.equipedItems.plus(res.removeAt(lastPressed))
+            val item: Item = res.removeAt(lastPressed)
+            game.player.armor = game.player.armor?.plus(item.armor)
+            game.player.attack = game.player.attack?.plus(item.attack)
+
+            game.player.equipedItems = game.player.equipedItems.plus(item)
 
             game.player.backpack?.items = res.toList()
 

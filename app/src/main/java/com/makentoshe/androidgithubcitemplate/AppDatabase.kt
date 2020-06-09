@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 import androidx.room.*
 import com.makentoshe.androidgithubcgameplate.GameDao
 
-@Database(entities = arrayOf(Game::class), version = 1, exportSchema = false)
+@Database(entities = arrayOf(Game::class), version = 2, exportSchema = false)
 @TypeConverters(ListItemConverter::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun gameDao(): GameDao
@@ -24,7 +24,7 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "game_database"
-                ).allowMainThreadQueries().build()
+                ).fallbackToDestructiveMigration().allowMainThreadQueries().build()
                 INSTANCE = instance
                 return instance
             }

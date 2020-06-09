@@ -52,10 +52,10 @@ class GameActivity : AppCompatActivity() {
         val gameDao = AppDatabase.getDatabase(applicationContext).gameDao()
         val game: Game = Game(1)
         //Log.d("CUR GAMES", gameDao.getAll().size.toString())
-        game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.chest1, typeOfItem = "chest"))!!
-        game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.helmet1, typeOfItem = "helmet"))!!
-        game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.legs1, typeOfItem = "boots"))!!
-        game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.uplegs1, typeOfItem = "legs"))!!
+        game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.chest1, typeOfItem = "chest", armor = 2))!!
+        game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.helmet1, typeOfItem = "helmet", armor = 1))!!
+        game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.legs1, typeOfItem = "boots", armor = 1))!!
+        game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.uplegs1, typeOfItem = "legs", armor = 2))!!
         gameDao.insertAll(game)
 
         healthV.text = "${game.player.hp}/${game.player.maxHp}"
@@ -75,6 +75,8 @@ class GameActivity : AppCompatActivity() {
         healthV.text = "${game.player.hp}/${game.player.maxHp}"
         manaV.text = "${game.player.mana}/${game.player.maxMana}"
         expV.text = "${game.player.exp}/${game.player.maxExp}"
+        Log.d("ATTACK:", game.player.attack.toString())
+        Log.d("Armor:", game.player.armor.toString())
     }
 
     override fun onPause() {

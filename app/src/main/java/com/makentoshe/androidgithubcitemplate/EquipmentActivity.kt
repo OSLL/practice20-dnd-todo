@@ -109,7 +109,11 @@ class EquipmentActivity : AppCompatActivity() {
                 }
             }
             val res: MutableList<Item> = game.player.equipedItems.toMutableList()
-            game.player.backpack?.items = game.player.backpack?.items!!.plus(res.removeAt(ind))
+            val item: Item = res.removeAt(ind)
+            game.player.armor = game.player.armor?.minus(item.armor)
+            game.player.attack = game.player.attack?.minus(item.attack)
+
+            game.player.backpack?.items = game.player.backpack?.items!!.plus(item)
 
             game.player.equipedItems = res.toList()
 
