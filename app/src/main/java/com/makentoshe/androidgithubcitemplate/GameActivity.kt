@@ -8,6 +8,8 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_game.*
 
 class GameActivity : AppCompatActivity() {
+    var states: List<State> = emptyList()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
@@ -22,6 +24,22 @@ class GameActivity : AppCompatActivity() {
         equipment.setOnClickListener {
             val intent: Intent = Intent(this, EquipmentActivity::class.java)
             startActivity(intent)
+        }
+
+        states = readData(applicationContext)
+        Log.d("state", states[0].msg)
+        mainText.setTextAutoTyping(states[0].getText())
+        mainText.setOnClickListener {
+            Log.d("ANIMATION", mainText.text.toString())
+            //mainText.text = states[0].msg
+            if (mainText.isRunning()){
+                mainText.typingSpeed = -1000000000
+                //mainText.text = states[0].msg
+            }
+            else{
+                mainText.typingSpeed = 75
+                mainText.setTextAutoTyping(states[0].getText())
+            }
         }
 
         val gameDao = AppDatabase.getDatabase(applicationContext).gameDao()
