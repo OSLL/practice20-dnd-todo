@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_game.*
 
 class GameActivity : AppCompatActivity() {
     var states: List<State> = emptyList()
+    var curState: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,9 +27,9 @@ class GameActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        states = readData(applicationContext)
+        states = readData(applicationContext, "test.json")
         Log.d("state", states[0].msg)
-        mainText.setTextAutoTyping(states[0].getText())
+        mainText.setTextAutoTyping(states[curState].getText())
         mainText.setOnClickListener {
             Log.d("ANIMATION", mainText.text.toString())
             //mainText.text = states[0].msg
@@ -37,8 +38,14 @@ class GameActivity : AppCompatActivity() {
                 //mainText.text = states[0].msg
             }
             else{
-                mainText.typingSpeed = 75
-                mainText.setTextAutoTyping(states[0].getText())
+                if (!states[curState].isActive())
+                    curState++
+                Log.d("curState", curState.toString() + states.size.toString())
+                if (!tryToWin()) {
+                    Log.d("WHAT", "HERE???!!!")
+                    mainText.typingSpeed = 75
+                    mainText.setTextAutoTyping(states[curState].getText())
+                }
             }
         }
 
@@ -73,5 +80,15 @@ class GameActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+    }
+
+    private fun tryToWin() : Boolean {
+        Log.d("WIN", "trying...")
+        if (curState < states.size) return false
+        Log.d("WIN", "WON!!!!")
+        val intent: Intent = Intent(this, WinActivity::class.java)
+        finish()
+        startActivity(intent)
+        return true
     }
 }

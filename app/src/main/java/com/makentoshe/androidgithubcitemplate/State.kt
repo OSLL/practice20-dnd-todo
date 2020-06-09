@@ -32,6 +32,13 @@ class State (
         }
         return ans
     }
+
+    fun isActive(): Boolean {
+        if (this.words == null) getWords()
+
+        if (cur > this.words!!.lastIndex) return false
+        return true
+    }
 }
 
 
