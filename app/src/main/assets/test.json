@@ -1,4 +1,6 @@
 [
-  "{\"msg\":\"nachalo.\"}",
-  "{\"msg\":\"end.\"}"
+  "{\"msg\":\"nachalo.\", \"monster\":true, \"itemDrop\":true}",
+  "{\"msg\":\"monster.\", \"monster\":true, \"itemDrop\":true}",
+  "{\"msg\":\"item.\", \"monster\":true, \"itemDrop\":true}",
+  "{\"msg\":\"end.\", \"monster\":false, \"itemDrop\":false}"
 ]

@@ -12,7 +12,7 @@ data class Player(
     @ColumnInfo(name = "max_mana") var maxMana: Int? = 400,
     @ColumnInfo(name = "max_experience") var maxExp: Int? = 999999999,
     @ColumnInfo(name = "armor") var armor: Int? = 0,
-    @ColumnInfo(name = "attack") var attack: Int? = 0,
+    @ColumnInfo(name = "attack") var attack: Int? = 5,
     //@ColumnInfo(name = "backpack") val backpack: Backpack?,
     @Embedded
     var backpack: Backpack? = Backpack(),

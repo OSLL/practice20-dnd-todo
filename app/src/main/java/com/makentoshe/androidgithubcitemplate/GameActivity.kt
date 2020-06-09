@@ -27,7 +27,7 @@ class GameActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        states = readData(applicationContext, "test.json")
+        states = readData(applicationContext, "data.json")
         Log.d("state", states[0].msg)
         mainText.setTextAutoTyping(states[curState].getText())
         mainText.setOnClickListener {
@@ -38,8 +38,21 @@ class GameActivity : AppCompatActivity() {
                 //mainText.text = states[0].msg
             }
             else{
-                if (!states[curState].isActive())
+                if (!states[curState].isActive()){
+                    /*if (states[curState].monster)
+                        fightMonster(states[curState].getMonster())
+                    if (states[curState].itemDrop)
+
+                       PickUpItem(states[curState].getItem())
+                    */
+                    if (states[curState].itemDrop){
+                        val gameDao = AppDatabase.getDatabase(applicationContext).gameDao()
+                        val game: Game = gameDao.loadById(1)
+                        game.player.backpack!!.items  = game.player.backpack!!.items.plus(Item(drawableId = R.drawable.chest2, typeOfItem = "chest", armor = 2))
+                        gameDao.insertAll(game)
+                    }
                     curState++
+                }
                 Log.d("curState", curState.toString() + states.size.toString())
                 if (!tryToWin()) {
                     Log.d("WHAT", "HERE???!!!")
@@ -49,9 +62,10 @@ class GameActivity : AppCompatActivity() {
             }
         }
 
+        //Log.d("CUR GAMES", gameDao.getAll().size.toString())
+
         val gameDao = AppDatabase.getDatabase(applicationContext).gameDao()
         val game: Game = Game(1)
-        //Log.d("CUR GAMES", gameDao.getAll().size.toString())
         game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.chest1, typeOfItem = "chest", armor = 2))!!
         game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.helmet1, typeOfItem = "helmet", armor = 1))!!
         game.player.backpack?.items = game.player.backpack?.items?.plus(Item(drawableId = R.drawable.legs1, typeOfItem = "boots", armor = 1))!!

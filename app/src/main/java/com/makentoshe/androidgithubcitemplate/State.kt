@@ -8,7 +8,9 @@ import java.io.FileReader
 import java.io.InputStream
 
 class State (
-    val msg: String = ""
+    val msg: String = "",
+    val monster: Boolean = false,
+    val itemDrop: Boolean = false
 ) {
     var words: List<String>? = null
     var cur = 0
@@ -38,6 +40,14 @@ class State (
 
         if (cur > this.words!!.lastIndex) return false
         return true
+    }
+
+    fun getItem(): Item {
+        return Item(drawableId = R.drawable.chest2, typeOfItem = "chest", armor = 4)
+    }
+
+    fun getMonster(): Monster {
+        return Monster(10, 5)
     }
 }
 
