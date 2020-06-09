@@ -124,6 +124,9 @@ class BackpackActivity : AppCompatActivity() {
             game.player.backpack?.items = res.toList()
 
             itemViews[game.player.backpack?.items!!.size].setImageResource(R.drawable.empty)
+            itemViews[game.player.backpack?.items!!.size].setOnClickListener {
+
+            }
             for (i in itemViews.indices){
                 if (game.player.backpack?.items!!.lastIndex < i) break
 
