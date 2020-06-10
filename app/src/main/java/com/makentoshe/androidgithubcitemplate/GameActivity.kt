@@ -45,12 +45,13 @@ class GameActivity : AppCompatActivity() {
 
                        PickUpItem(states[curState].getItem())
                     */
+                    val gameDao = AppDatabase.getDatabase(applicationContext).gameDao()
+                    val game: Game = gameDao.loadById(1)
                     if (states[curState].itemDrop){
-                        val gameDao = AppDatabase.getDatabase(applicationContext).gameDao()
-                        val game: Game = gameDao.loadById(1)
                         game.player.backpack!!.items  = game.player.backpack!!.items.plus(Item(drawableId = R.drawable.chest2, typeOfItem = "chest", armor = 2))
                         gameDao.insertAll(game)
                     }
+                    game.player.exp = game.player.exp?.plus(54)
                     curState++
                 }
                 Log.d("curState", curState.toString() + states.size.toString())

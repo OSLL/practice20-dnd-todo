@@ -64,7 +64,7 @@
         app:layout_constraintStart_toEndOf="@+id/chest"
         app:layout_constraintTop_toBottomOf="@+id/helmet"
         app:srcCompat="@drawable/empty"
-        android:layout_marginStart="20dp"/>
+        android:layout_marginStart="20dp" />
 
     <ImageView
         android:id="@+id/ulegs"
@@ -114,7 +114,8 @@
         app:layout_constraintStart_toEndOf="@id/magic2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/manaTV"/>
+        app:layout_constraintBottom_toTopOf="@id/manaTV"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/manaTV"
@@ -124,7 +125,8 @@
         app:layout_constraintStart_toEndOf="@id/magic2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hpTV"
-        app:layout_constraintBottom_toTopOf="@id/expTV"/>
+        app:layout_constraintBottom_toTopOf="@id/expTV"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/expTV"

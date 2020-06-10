@@ -14,6 +14,8 @@ class EquipmentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_equipment)
 
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+
         to_gameB.setOnClickListener {
             onBackPressed()
         }
@@ -63,6 +65,9 @@ class EquipmentActivity : AppCompatActivity() {
                 }
             }
         }
+
+        hpTV.text = "Armor:${game.player.armor}"
+        manaTV.text = "Attack:${game.player.attack}"
     }
 
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -118,6 +123,9 @@ class EquipmentActivity : AppCompatActivity() {
             game.player.equipedItems = res.toList()
 
             gameDao.insertAll(game)
+
+            hpTV.text = "Armor:${game.player.armor}"
+            manaTV.text = "Attack:${game.player.attack}"
         }
     }
 }
